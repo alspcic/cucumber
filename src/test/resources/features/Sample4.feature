@@ -3,8 +3,10 @@ Feature: Introduction to cucumber part 4
   As a test engineer
   I want to be able to write and execute a scenario with steps that have tables
 
-  Scenario: a new scenario 1 with table
+  Background:
     Given I am on age page
+
+  Scenario: a new scenario 1 with table
     When I enter values:
       | name | Ann |
       | age  | 5   |
@@ -12,7 +14,6 @@ Feature: Introduction to cucumber part 4
     Then I see message: "Hello, Ann, you are a kid"
 
   Scenario: a new scenario 1 with table
-    Given I am on age page
     When I enter values:
       | name | Bob |
       | age  | 61  |
@@ -21,7 +22,6 @@ Feature: Introduction to cucumber part 4
 
   @debug
   Scenario Outline: a new scenario outline 2
-    Given I am on age page
     When I enter values:
       | name | <name> |
       | age  | <age>  |
@@ -31,3 +31,4 @@ Feature: Introduction to cucumber part 4
       | name | age | message                      |
       | Ann  | 5   | Hello, Ann, you are a kid    |
       | Bob  | 61  | Hello, Bob, you are an adult |
+

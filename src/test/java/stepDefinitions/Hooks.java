@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 
 public class Hooks {
     public static WebDriver driver;
-    static String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
+    static String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
 
     @Before
     public void openBrowser() throws MalformedURLException {
@@ -24,13 +24,12 @@ public class Hooks {
 
     @After
     public void embedScreenshot(Scenario scenario) {
-        if(scenario.isFailed()) {
+        if (scenario.isFailed()) {
             try {
                 scenario.write("Current Page URL is " + driver.getCurrentUrl());
-                byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+                byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
                 scenario.embed(screenshot, "image/png");
-            }
-            catch (WebDriverException somePlatformsDontSupportScreenshots) {
+            } catch (WebDriverException somePlatformsDontSupportScreenshots) {
                 System.err.println(somePlatformsDontSupportScreenshots.getMessage());
             }
         }
