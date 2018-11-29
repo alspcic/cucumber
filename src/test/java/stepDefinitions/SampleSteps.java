@@ -106,4 +106,31 @@ public class SampleSteps {
         String text = "You entered text: \"asdf\"";
         assertEquals(text, driver.findElement(By.id("result_text")).getText());
     }
+
+    @When("^I enter \"([^\"]*)\" text$")
+    public void iEnterText(String text) throws Throwable {
+        driver.findElement(By.id("text")).clear();
+        driver.findElement(By.id("text")).sendKeys(text);
+    }
+
+    @Then("^I see correct result with text \"([^\"]*)\"$")
+    public void iSeeCorrectResultWithText(String text) throws Throwable {
+        assertEquals("You entered text: \"" + text + "\"", driver.findElement(By.cssSelector("#result_text")).getText());
+    }
+
+    @When("^I enter number (\\d+)$")
+    public void iEnterNumber(int number) throws Throwable {
+        driver.findElement(By.id("text")).clear();
+        driver.findElement(By.id("text")).sendKeys(String.valueOf(number));
+    }
+
+    @And("^I click the result number button$")
+    public void iClickTheResultNumberButton() throws Throwable {
+        driver.findElement(By.id("result_button_number")).click();
+    }
+
+    @Then("^I see correct result with text (\\d+)$")
+    public void iSeeCorrectResultWithText(int number) throws Throwable {
+        assertEquals("You entered number: \"" + number + "\"", driver.findElement(By.cssSelector("#result_number")).getText());
+    }
 }

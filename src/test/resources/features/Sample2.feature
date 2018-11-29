@@ -23,6 +23,7 @@ Feature: Introduction to cucumber part 2
     And I click the result button
     Then I see correct result with text "asdf"
 
+  @test
   Scenario: my second scenario 2
     Given I am on action page
     When I enter number 5
