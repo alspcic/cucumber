@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -62,7 +63,7 @@ public class SampleSteps {
         driver.findElement(By.id("submit")).click();
     }
 
-    @Then("^I see message: \"(.*)\"$")
+    @Then("^I see message: \"([^\"]*)\"$")
     public void iSeeMessage(String message) throws Throwable {
         assertEquals(message, driver.findElement(By.id("message")).getText());
     }
@@ -75,5 +76,34 @@ public class SampleSteps {
             System.out.println("key is " + e.getKey());
             System.out.println("value is " + e.getValue());
         }
+    }
+
+    @And("^I should see menu$")
+    public void iShouldSeeMenu() throws Throwable {
+        assertTrue(driver.findElement(By.className("w3-navbar")).isDisplayed());
+    }
+
+    @Given("^I am on action page$")
+    public void iAmOnActionPage() throws Throwable {
+        driver.get("https://kristinek.github.io/site/examples/actions");
+    }
+
+    @When("^I enter text$")
+    public void iEnterText() throws Throwable {
+        String textInput = "asdf";
+        WebElement textBox =  driver.findElement(By.id("text"));
+        textBox.clear();
+        textBox.sendKeys(textInput);
+    }
+
+    @And("^I click the result button$")
+    public void iClickTheResultButton() throws Throwable {
+        driver.findElement(By.id("result_button_text")).click();
+    }
+
+    @Then("^I see correct result text$")
+    public void iSeeCorrectResultText() throws Throwable {
+        String text = "You entered text: \"asdf\"";
+        assertEquals(text, driver.findElement(By.id("result_text")).getText());
     }
 }

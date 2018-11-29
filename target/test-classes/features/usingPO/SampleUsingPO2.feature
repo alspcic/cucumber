@@ -1,4 +1,4 @@
-@regression @test
+@regression
 Feature: Introduction to cucumber part 2
   As a test engineer
   I want to be able to write and execute a scenario with parameters
