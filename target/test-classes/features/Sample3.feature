@@ -16,7 +16,26 @@ Feature: Introduction to cucumber part 3
       | Ann   | 5   | Hello, Ann, you are a kid      |
       | Marry | 50  | Hello, Marry, you are an adult |
       | Bob   | 61  | Hello, Bob, you are an adult   |
-  @not_working
+
+
+#  @not_working
+#    Examples:
+#      | name | age | message                   |
+#      | Tom  | 15  | Hello, Tom, you are a kid |
+
+
+  @test
+  Scenario Outline: my third scenario
+    Given I am on action page
+    When I enter "<test>" text
+    And I click the result button
+    Then I see correct result with text "<test>"
+    @bug
     Examples:
-      | name | age | message                   |
-      | Tom  | 15  | Hello, Tom, you are a kid |
+      | test |
+      | asdf |
+      | 7    |
+    Examples:
+      | test |
+      | 45   |
+      | 2359 |

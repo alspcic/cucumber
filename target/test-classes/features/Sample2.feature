@@ -16,14 +16,12 @@ Feature: Introduction to cucumber part 2
     And I click submit age
     Then I see message: "Hello, Bob, you are an adult"
 
-  @test
   Scenario: my second scenario 1
     Given I am on action page
     When I enter "asdf" text
     And I click the result button
     Then I see correct result with text "asdf"
 
-  @test
   Scenario: my second scenario 2
     Given I am on action page
     When I enter number 5
