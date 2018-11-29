@@ -21,14 +21,14 @@
 
 ### Task
 #### Task 1
-In Task1.feature create 1 scenario outline and
+In [Task1.feature](../master/src/test/resources/features/Task1.feature) create 1 scenario outline and
 1 scenario for page 
 "https://kristinek.github.io/site/tasks/enter_a_number"
-  1) For error cases:
-      1.1) enter number too small
-      1.2) enter number too big
-      1.3) enter text intead of the number
-  2) Enter correct number
+  * Scenario outline for error cases:
+      * enter number too small
+      * enter number too big
+      * enter text intead of the number
+  * Scenario for correct number
 
 
 ### Feedback
