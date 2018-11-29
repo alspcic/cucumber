@@ -20,5 +20,15 @@
    ![Alt text](img/git_push_2.png?raw=true "git push 2 via IDEA")
 
 ### Task
+#### Task 1
+In Task1.feature create 1 scenario outline and
+1 scenario for page 
+"https://kristinek.github.io/site/tasks/enter_a_number"
+  1) For error cases:
+      1.1) enter number too small
+      1.2) enter number too big
+      1.3) enter text intead of the number
+  2) Enter correct number
+
 
 ### Feedback
