@@ -133,4 +133,21 @@ public class SampleSteps {
     public void iSeeCorrectResultWithText(int number) throws Throwable {
         assertEquals("You entered number: \"" + number + "\"", driver.findElement(By.cssSelector("#result_number")).getText());
     }
+
+    @And("^I click the result checkbox button$")
+    public void iClickTheResultCheckboxButton() throws Throwable {
+        driver.findElement(By.id("result_button_checkbox")).click();
+    }
+
+    @When("^I clicked on checkboxes:$")
+    public void iClickedOnCheckboxes(List<String> values) throws Throwable {
+        for (String value : values) {
+            driver.findElement(By.cssSelector("[value='" + value + "']")).click();
+        }
+    }
+
+    @Then("^message for checkboxes \"([^\"]*)\" is seen$")
+    public void messageForCheckboxesIsSeen(String message) throws Throwable {
+        assertEquals(message, driver.findElement(By.id("result_checkbox")).getText());
+    }
 }

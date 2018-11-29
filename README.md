@@ -4,7 +4,8 @@
 * For step definition use [SampleSteps.java](../master/src/test/java/stepDefinitions/SampleSteps.java)
 * Simple scenario example: [Sample1.feature](../master/src/test/resources/features/Sample1.feature)
 * Simple scenario with parameters in steps: [Sample2.feature](../master/src/test/resources/features/Sample2.feature)
-* Scenario outline example [Sample3.feature](../master/src/test/resources/features/Sample3.feature)
+* Scenario outline example: [Sample3.feature](../master/src/test/resources/features/Sample3.feature)
+* Scenario tables in steps and background example: [Sample4.feature](../master/src/test/resources/features/Sample4.feature)
 
 #### Same but with Page Object:
 * For step definition use [SamplePOSteps.java](../master/src/test/java/stepDefinitions/SamplePOSteps.java)
