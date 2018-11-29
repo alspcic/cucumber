@@ -16,7 +16,7 @@
 * [AgeSubmittedPage.java](../master/src/test/java/pages_sample/AgeSubmittedPage.java)
 
 
-### Task
+### Tasks
 #### Task 1
 In [Task1.feature](../master/src/test/resources/features/Task1.feature) create 1 scenario outline and
 1 scenario for page with url:
