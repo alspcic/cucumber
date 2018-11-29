@@ -19,16 +19,32 @@
    ![Alt text](img/git_push_1.png?raw=true "git push 1 via IDEA")
    ![Alt text](img/git_push_2.png?raw=true "git push 2 via IDEA")
 
+### Structure
+#### Same but without Page Object:
+* For running tests use [CucumberRunner.java](../master/src/test/java/runners/CucumberRunner.java)
+* For step definition use [SampleSteps.java](../master/src/test/java/stepDefinitions/SampleSteps.java)
+* Simple scenario example: [Sample1.feature](../master/src/test/resources/features/Sample1.feature)
+* Simple scenario with parameters in steps: [Sample2.feature](../master/src/test/resources/features/Sample2.feature)
+* Scenario outline example [Sample3.feature](../master/src/test/resources/features/Sample3.feature)
+
+#### Same but with Page Object:
+* For step definition use [SamplePOSteps.java](../master/src/test/java/stepDefinitions/SamplePOSteps.java)
+* Simple scenario with parameters in steps: [SampleUsingPO2.feature](../master/src/test/resources/features/SampleUsingPO2.feature)
+* Scenario outline example [SampleUsingPO3.feature](../master/src/test/resources/features/SampleUsingPO3.feature)
+
+\+ Page Objects:
+* [AgePage.java](../master/src/test/java/pages_sample/AgePage.java)
+* [AgeSubmittedPage.java](../master/src/test/java/pages_sample/AgeSubmittedPage.java)
+
+
 ### Task
 #### Task 1
 In [Task1.feature](../master/src/test/resources/features/Task1.feature) create 1 scenario outline and
-1 scenario for page 
+1 scenario for page with url:
 "https://kristinek.github.io/site/tasks/enter_a_number"
   * Scenario outline for error cases:
       * enter number too small
       * enter number too big
-      * enter text intead of the number
+      * enter text instead of the number
   * Scenario for correct number
 
-
-### Feedback
