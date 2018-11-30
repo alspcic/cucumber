@@ -28,6 +28,19 @@ In [Task1.feature](../master/src/test/resources/features/Task1.feature) create 1
       * enter text instead of the number
   * Scenario for correct number
   
+#### Task 2
+In [Task2.feature](../master/src/test/resources/features/Task2.feature) create 1 scenario outline and
+create scenario or scenario outlines for page
+in order to test that user can
+  * add a new person with correct data
+  * edit a person
+  * remove a person
+  * reset original list after
+      * adding a person
+      * editing a person
+      * removing a person
+  * check that clear button on adding a user works correctly
+  
   ### Get project 
   1. In Idea "File" -> "New" -> "Project from Version Control" -> "Git"
   2. Select add url https://github.com/KristineK/cucumber_java_basic for cloning project
