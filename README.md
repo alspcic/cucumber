@@ -30,7 +30,7 @@ In [Task1.feature](../master/src/test/resources/features/Task1.feature) create 1
   
 #### Task 2
 In [Task2.feature](../master/src/test/resources/features/Task2.feature) create 1 scenario outline and
-create scenario or scenario outlines for page https://kristinek.github.io/site/tasks/enter_a_new_person.html or https://kristinek.github.io/site/tasks/list_of_people_with_jobs.html
+create scenario or scenario outlines for page https://kristinek.github.io/site/tasks/list_of_people.html or https://kristinek.github.io/site/tasks/list_of_people_with_jobs.html
 in order to test that user can
   * add a new person with correct data
   * edit a person
