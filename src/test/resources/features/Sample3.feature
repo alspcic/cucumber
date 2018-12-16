@@ -21,18 +21,3 @@ Feature: Introduction to cucumber part 3
       | name | age | message                   |
       | Tom  | 15  | Hello, Tom, you are a kid |
 
-
-  Scenario Outline: my third scenario
-    Given I am on action page
-    When I enter "<test>" text
-    And I click the result button
-    Then I see correct result with text "<test>"
-    @bug
-    Examples:
-      | test |
-      | asdf |
-      | 7    |
-    Examples:
-      | test |
-      | 45   |
-      | 2359 |

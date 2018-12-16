@@ -5,7 +5,8 @@
 * Simple scenario example: [Sample1.feature](../master/src/test/resources/features/Sample1.feature)
 * Simple scenario with parameters in steps: [Sample2.feature](../master/src/test/resources/features/Sample2.feature)
 * Scenario outline example: [Sample3.feature](../master/src/test/resources/features/Sample3.feature)
-* Scenario tables in steps and background example: [Sample4.feature](../master/src/test/resources/features/Sample4.feature)
+* Scenario tables with 1 column in steps: [Sample4.feature](../master/src/test/resources/features/Sample4.feature)
+* Scenario tables with 2 columns in steps and background example: [Sample5.feature](../master/src/test/resources/features/Sample5.feature)
 
 #### Same but with Page Object:
 * For step definition use [SamplePOSteps.java](../master/src/test/java/stepDefinitions/SamplePOSteps.java)

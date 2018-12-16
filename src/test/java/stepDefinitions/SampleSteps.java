@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,9 +7,6 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
-import pages_sample.AgePage;
 
 import java.util.List;
 import java.util.Map;
@@ -83,57 +79,6 @@ public class SampleSteps {
         assertTrue(driver.findElement(By.className("w3-navbar")).isDisplayed());
     }
 
-    @Given("^I am on action page$")
-    public void iAmOnActionPage() throws Throwable {
-        driver.get("https://kristinek.github.io/site/examples/actions");
-    }
-
-    @When("^I enter text$")
-    public void iEnterText() throws Throwable {
-        String textInput = "asdf";
-        WebElement textBox =  driver.findElement(By.id("text"));
-        textBox.clear();
-        textBox.sendKeys(textInput);
-    }
-
-    @And("^I click the result button$")
-    public void iClickTheResultButton() throws Throwable {
-        driver.findElement(By.id("result_button_text")).click();
-    }
-
-    @Then("^I see correct result text$")
-    public void iSeeCorrectResultText() throws Throwable {
-        String text = "You entered text: \"asdf\"";
-        assertEquals(text, driver.findElement(By.id("result_text")).getText());
-    }
-
-    @When("^I enter \"([^\"]*)\" text$")
-    public void iEnterText(String text) throws Throwable {
-        driver.findElement(By.id("text")).clear();
-        driver.findElement(By.id("text")).sendKeys(text);
-    }
-
-    @Then("^I see correct result with text \"([^\"]*)\"$")
-    public void iSeeCorrectResultWithText(String text) throws Throwable {
-        assertEquals("You entered text: \"" + text + "\"", driver.findElement(By.cssSelector("#result_text")).getText());
-    }
-
-    @When("^I enter number (\\d+)$")
-    public void iEnterNumber(int number) throws Throwable {
-        driver.findElement(By.id("text")).clear();
-        driver.findElement(By.id("text")).sendKeys(String.valueOf(number));
-    }
-
-    @And("^I click the result number button$")
-    public void iClickTheResultNumberButton() throws Throwable {
-        driver.findElement(By.id("result_button_number")).click();
-    }
-
-    @Then("^I see correct result with text (\\d+)$")
-    public void iSeeCorrectResultWithText(int number) throws Throwable {
-        assertEquals("You entered number: \"" + number + "\"", driver.findElement(By.cssSelector("#result_number")).getText());
-    }
-
     @And("^I click the result checkbox button$")
     public void iClickTheResultCheckboxButton() throws Throwable {
         driver.findElement(By.id("result_button_checkbox")).click();
@@ -151,18 +96,8 @@ public class SampleSteps {
         assertEquals(message, driver.findElement(By.id("result_checkbox")).getText());
     }
 
-    @Then("^I see error if I enter numbers:$")
-    public void iSeeErrorIfIEnterNumbers(Map<String, String> numberToEnter) throws Throwable {
-        for (Map.Entry<String, String> firstChecks : numberToEnter.entrySet()) {
-            driver.findElement(By.id("numb")).clear();
-            driver.findElement(By.id("numb")).sendKeys(firstChecks.getKey()); // 3
-            driver.findElement(By.cssSelector(".w3-btn")).click();
-            assertEquals(firstChecks.getValue(), driver.findElement(By.id("ch1_error")).getText()); // Number is too small
-        }
-    }
-
-    @When("^I am on number page$")
-    public void iAmOnNumberPage() throws Throwable {
-        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+    @Given("^I am on action page$")
+    public void iAmOnActionPage() {
+        driver.get("https://kristinek.github.io/site/examples/actions");
     }
 }
