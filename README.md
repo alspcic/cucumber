@@ -3,8 +3,4 @@ In Task2.feature create 1 scenario outline and create scenario or scenario outli
 add a new person
 edit a person
 remove a person
-reset original list after
-adding a person
-editing a person
-removing a person
 check that clear button on adding a user works correctly
