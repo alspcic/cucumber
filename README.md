@@ -1,4 +1,4 @@
-In Task2.feature create 1 scenario outline and create scenario or scenario outlines for page https://kristinek.github.io/site/tasks/list_of_people.html or https://kristinek.github.io/site/tasks/list_of_people_with_jobs.html in order to test that user can:
+In Task2.feature create 1 scenario outline and create scenario or scenario outlines for page https://kristinek.github.io/site/tasks/list_of_people_with_jobs.html in order to test that user can:
 
 add a new person,
 edit a person,
