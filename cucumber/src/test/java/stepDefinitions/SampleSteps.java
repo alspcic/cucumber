@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,6 +64,9 @@ public class SampleSteps {
     @Then("^I see message: \"([^\"]*)\"$")
     public void iSeeMessage(String message) throws Throwable {
         assertEquals(message, driver.findElement(By.id("message")).getText());
+
+        Alert alert = driver.switchTo().alert();
+        alert.getText();
     }
 
     @When("^I enter values:$")
@@ -158,5 +162,16 @@ public class SampleSteps {
     @When("^I select \"Option 1\" by value$")
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
+    }
+
+    @Given("^I am on the google page$")
+    public void iAmOnTheGooglePage() throws Throwable {
+        driver.get("http://www.google.com");
+    }
+
+    @And("^i type \"([^\"]*)\" asd$")
+    public void iTypeAsd(String name) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 }
