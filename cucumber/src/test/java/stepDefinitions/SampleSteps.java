@@ -159,4 +159,63 @@ public class SampleSteps {
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
     }
+
+    @Given("^I am on the Google page$")
+    public void iAmOnTheGooglePage() throws Throwable {
+        driver.get("https://www.google.com/");
+    }
+
+    @When("^I verify Google Search button text$")
+    public void iVerifyGoogleSearchButtonText() throws Throwable {
+        Thread.sleep(5000);
+        String value = driver.findElement(By.cssSelector("input[name='btnK'][type='submit']")).getAttribute("value");
+//        System.out.println(value);
+        assertTrue(value.equals("Google meklēšana"));
+    }
+
+    @And("^I verify google lucky button text$")
+    public void iVerifyGoogleLuckyButtonText() throws Throwable {
+//        assertEquals("I'm Feeling Lucky",
+//                driver.findElement(By.cssSelector("input[name='btnI'][type='submit']")).getText());
+        String secondValue = driver.findElement(By.cssSelector("input[name='btnI'][type='submit']")).getAttribute("value");
+        assertTrue(secondValue.equals("Es ticu veiksmei!"));
+    }
+
+    @And("^I should see google image$")
+    public void iShouldSeeGoogleImage() throws Throwable {
+        assertTrue(driver.findElement(By.cssSelector("#hplogo")).isDisplayed());
+    }
+
+    @Then("^I enter: \"(.*)\" text in search field$")
+    public void iEnterTextInSearchField(String text) throws Throwable {
+        driver.findElement(By.name("q")).sendKeys(text);
+
+    }
+
+    @And("^press Google search button$")
+    public void pressGoogleSearchButton() throws Throwable {
+        Thread.sleep(5000);
+//        driver.findElement(By.cssSelector("input[name='btnK'][type='submit']")).click();
+        driver.findElement(By.name("btnK")).click();
+    }
+
+    @Given("^I am on task page$")
+    public void iAmOnTaskPage() throws Throwable {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number#");
+        assertEquals("https://kristinek.github.io/site/tasks/enter_a_number#",
+                driver.getCurrentUrl());
+    }
+
+    @When("^I enter number: (\\d+)$")
+    public void iEnterNumber(int arg0) throws Throwable {
+        String number = String.valueOf(arg0);
+        driver.findElement(By.id("numb")).clear();
+        driver.findElement(By.id("numb")).sendKeys(number);
+        driver.findElement(By.xpath("//*[@type='button']")).click();
+    }
+
+    @Then("^I should see an error: \"([^\"]*)\"$")
+    public void iShouldSeeAnError(String errorText) throws Throwable {
+        assertEquals(errorText, driver.findElement(By.id("ch1_error")).getText());
+    }
 }
