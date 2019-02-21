@@ -4,10 +4,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import util.BaseUtil;
+import util.CommonUtil;
 
-public class GoogleSearchSteps extends BaseUtil {
+public class GoogleSearchSteps extends CommonUtil {
 
     @Given("^I am on Google page$")
     public void iAmOnGooglePage() {

@@ -1,18 +1,13 @@
 package stepDefinitions;
 
-import Pages.Kristinek.KristinekMainPage;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import util.BaseUtil;
+import util.CommonUtil;
+import util.Log;
 
-public class Task2NumberSteps extends BaseUtil {
+public class Task2NumberSteps extends CommonUtil {
 
 
     public int number;
@@ -51,7 +46,8 @@ public class Task2NumberSteps extends BaseUtil {
             String formatted = String.format("%4.2f", sqrt);
             forCompare = ("Square root of " + number
                     + " is " + formatted);
-            System.out.println("| Number " + number + " is in range from 50 to 100");
+//            System.out.println("| Number " + number + " is in range from 50 to 100");
+            Log.info("| Number " + number + " is in range from 50 to 100");
         } else {
             throw new RuntimeException("| Number " + number + " is not in range from 50 to 100");
         }
@@ -60,7 +56,8 @@ public class Task2NumberSteps extends BaseUtil {
     @Then("^I see popup message$")
     public void iSeePopupMessage() {
         String alert = driver.switchTo().alert().getText();
-        System.out.println("| Alert message is : " + alert + " |");
+//        System.out.println("| Alert message is : " + alert + " |");
+        Log.info("| Alert message is : " + alert + " |");
         Assert.assertTrue(alert.equals(forCompare));
 
     }
