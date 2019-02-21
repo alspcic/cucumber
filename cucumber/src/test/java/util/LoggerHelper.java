@@ -19,7 +19,7 @@ public class LoggerHelper {
         if (root){
             return Logger.getLogger(cls);
         }
-        PropertyConfigurator.configure("/resources/properties/log4j.properties");
+        PropertyConfigurator.configure("cucumber/src/test/resources/properties/log4j.properties");
         root = true;
         return Logger.getLogger(cls);
     }

@@ -6,6 +6,7 @@ import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import util.CommonUtil;
 import util.DriverFactory;
+import util.Log;
 import util.ScreenShot;
 
 import static org.junit.Assert.fail;
@@ -23,6 +24,7 @@ public class Hooks {
 //        driver = DriverFactory.initialize();
         driver = DriverFactory.initialize(scenario.getName());
         setupObj.initiialSetup(driver,scenario);
+        Log.startTestCase(CommonUtil.scenario.getName());
     }
 
     @After
@@ -30,6 +32,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             ScreenShot.saveScreenshot(driver, scenario.getName());
         }
+        Log.endTestCase(scenario.getName());
         DriverFactory.destroyDriver();
     }
 }

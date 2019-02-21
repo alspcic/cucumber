@@ -11,7 +11,7 @@ public class Log {
     public static void startTestCase(String sTestCaseName){
 
         Log.info("****************************************************************************************");
-        Log.info("$$$$$$$$$$$$$$$$$$$$$    "+sTestCaseName+CommonUtil.runNo+ "   $$$$$$$$$$$$$$$$$$$$$$$$$");
+        Log.info("$$$$$$$$$$$$$$$$$$$$$    "+sTestCaseName+",run #  "+CommonUtil.runNo+ "   $$$$$$$$$$$$$$$$$$$$$$$$$");
         Log.info("****************************************************************************************");
 
     }
