@@ -2,6 +2,7 @@ package util;
 
 import Pages.Google.GoogleMainPage;
 import Pages.Kristinek.KristinekMainPage;
+import Pages.Kristinek.PeopleWithJobs;
 import cucumber.api.Scenario;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -29,6 +30,7 @@ public class CommonUtil {
     public static Actions actions;
     public static GoogleMainPage googleMainPage;
     public static KristinekMainPage kristinekMainPage;
+    public static PeopleWithJobs peopleWithJobs;
     public static Scenario scenario;
     public static String scenarioName;
     public static StringBuilder errorMsg = new StringBuilder();
@@ -44,6 +46,7 @@ public class CommonUtil {
     public void initializeComponentsObjects(){
         googleMainPage = new GoogleMainPage(driver);
         kristinekMainPage= new KristinekMainPage(driver);
+        peopleWithJobs = new PeopleWithJobs(driver);
     }
 
     /**
@@ -501,9 +504,8 @@ public class CommonUtil {
      * @param element
      */
     public void selectCheckbox(WebElement element) {
-        if (element.getAttribute("data-qa").contains("checked")) {
-            System.out.println(" ");
-            System.out.println("| " + element.getText() + " already selected |");
+        if (element.isSelected()) {
+            Log.info("| checkbox already selected |");
         } else {
             element.click();
         }

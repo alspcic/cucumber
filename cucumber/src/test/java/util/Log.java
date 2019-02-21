@@ -11,14 +11,14 @@ public class Log {
     public static void startTestCase(String sTestCaseName){
 
         Log.info("****************************************************************************************");
-        Log.info("$$$$$$$$$$$$$$$$$$$$$    "+sTestCaseName+",run #  "+CommonUtil.runNo+ "   $$$$$$$$$$$$$$$$$$$$$$$$$");
+        Log.info("$$$$$$$$$$$$$$$$$$$$$    "+sTestCaseName+"   $$$$$$$$$$$$$$$$$$$$$$$$$");
         Log.info("****************************************************************************************");
 
     }
 
     //This is to print log for the ending of the test case
     public static void endTestCase(String sTestCaseName){
-        Log.info("XXXXXXXXXXXXXXXXXXXXXXX      End of run N"+CommonUtil.runNo+"     XXXXXXXXXXXXXXXXXXXXXX");
+        Log.info("XXXXXXXXXXXXXXXXXXXXXXX      End of run      XXXXXXXXXXXXXXXXXXXXXX");
         Log.info(" ");
         CommonUtil.runNo=CommonUtil.runNo+1;
     }

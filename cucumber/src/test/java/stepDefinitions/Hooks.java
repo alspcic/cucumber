@@ -21,7 +21,6 @@ public class Hooks {
 
     @Before
     public void openBrowser(Scenario scenario) {
-//        driver = DriverFactory.initialize();
         driver = DriverFactory.initialize(scenario.getName());
         setupObj.initiialSetup(driver,scenario);
         Log.startTestCase(CommonUtil.scenario.getName());
