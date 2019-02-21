@@ -9,6 +9,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import util.BaseUtil;
+import util.DriverFactory;
 
 import java.net.MalformedURLException;
 import java.util.Locale;
@@ -16,34 +18,22 @@ import java.util.Locale;
 import static org.junit.Assert.fail;
 
 public class Hooks {
-    public static WebDriver driver;
+    WebDriver driver;
+    BaseUtil setupObj = new BaseUtil();
+
+    public Hooks(DriverFactory driver){
+        this.driver = driver.getDriver();
+    }
 
     @Before
-    public void openBrowser() throws Exception {
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\" + "chromedriver.exe");
-        } else if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverMac");
-        } else if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverLinux");
-        } else {
-            fail("Chrome driver for our OS is not in our libs please add it.");
-        }
-        driver = new ChromeDriver();
-        driver.manage().deleteAllCookies();
+    public void openBrowser() {
+        driver = DriverFactory.initialize();
+        setupObj.initiialSetup(driver);
     }
 
     @After
-    public void embedScreenshot(Scenario scenario) {
-        if (scenario.isFailed()) {
-            try {
-                scenario.write("Current Page URL is " + driver.getCurrentUrl());
-                byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                scenario.embed(screenshot, "image/png");
-            } catch (WebDriverException somePlatformsDontSupportScreenshots) {
-                System.err.println(somePlatformsDontSupportScreenshots.getMessage());
-            }
-        }
-        driver.quit();
+    public void shutDown() {
+        DriverFactory.destroyDriver();
     }
 }
+

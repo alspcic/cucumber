@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
                 "junit:cucumber-report/junit-report.xml",
                 "json:cucumber-report/json-report.json"},
 //        tags = {"@test", "~@bug"},
-        glue = {"stepDefinitions"}
+        glue = {"stepDefinitions"},
+        monochrome = true
 )
 public class CucumberRunner {
 
