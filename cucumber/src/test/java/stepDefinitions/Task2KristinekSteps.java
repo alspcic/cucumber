@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import util.BaseUtil;
 
-public class Task2NumberSteps extends BaseUtil {
+public class Task2KristinekSteps extends BaseUtil {
 
 
     public int number;
@@ -24,25 +24,25 @@ public class Task2NumberSteps extends BaseUtil {
     }
 
 
-    @And("^I click the button$")
-    public void iClickTheButton() {
-        kristinekMainPage.submitBtn.click();
-    }
-
-
     @And("^I enter number: (.*)$")
     public void iEnterNumber(int arg0) {
         kristinekMainPage.numberInputField.sendKeys(String.valueOf(arg0));
         number = arg0;
     }
 
+    @And("^I click the button$")
+    public void iClickTheButton() {
+        kristinekMainPage.submitBtn.click();
+    }
+
+
     @And("^I verify error \"([^\"]*)\"$")
     public void iVerifyError(String arg0) {
         String Actualtext = kristinekMainPage.errorMsg.getText();
         Assert.assertEquals(arg0, Actualtext);
-
-
     }
+
+
 
     @And("^I check this number according to the rules$")
     public void iCheckThisNumberAccordingToTheRules() {
@@ -63,5 +63,10 @@ public class Task2NumberSteps extends BaseUtil {
         System.out.println("| Alert message is : " + alert + " |");
         Assert.assertTrue(alert.equals(forCompare));
 
+    }
+
+    @And("^Pause$")
+    public void pause() {
+       iPause();
     }
 }

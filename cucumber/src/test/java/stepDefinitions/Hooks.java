@@ -18,7 +18,7 @@ import java.util.Locale;
 import static org.junit.Assert.fail;
 
 public class Hooks {
-    WebDriver driver;
+    public static WebDriver driver;
     BaseUtil setupObj = new BaseUtil();
 
     public Hooks(DriverFactory driver){
