@@ -46,4 +46,11 @@ public class PeopleWithJobs {
         public WebElement maleRadio;
         @FindBy(css = "[id='male']")
         public WebElement femaleRadio;
+
+        @FindBy(css = "[class=w3-padding-16]:last-child")
+        public WebElement lastAdded;
+        @FindBy(css = "[class=w3-padding-16]")
+        public List<WebElement> numberOfPeopleInTable;
+
+
 }
