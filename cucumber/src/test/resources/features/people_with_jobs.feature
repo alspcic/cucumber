@@ -20,4 +20,4 @@ Feature: This feature checks people with jobs
     Examples:
       | Name | Surname  | Job    | Date of birth | Gender | Reset before run |
       | John | Doe      | Killer | 02/08/1980    | Male   | true             |
-      | Anna | Shponkel | Dancer | 05/10/1998    | Female | falsae           |
+      | Anna | Shponkel | Dancer | 05/10/1998    | Female | false            |
