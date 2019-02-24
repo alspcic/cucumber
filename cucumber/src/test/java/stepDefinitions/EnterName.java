@@ -45,7 +45,7 @@ public class EnterName extends BaseUtil {
     }
 
     @When("^I chose language:$")
-    public void iChoseLanguage(List<String> values) throws Throwable {
+    public void iChoseLanguage(List<String> values) {
         for (String value : values)
             if (!driver.findElement(By.id("english")).isSelected()) {
                 driver.findElement(By.id("english")).click();
@@ -57,22 +57,22 @@ public class EnterName extends BaseUtil {
 
     @And("^I click the radiobutton$")
     public void iClickTheRadiobutton() {
-        driver.findElement(By.id("female")).click();
+        kristinekMainPage.femaleRadioBtn.click();
 //        mainPage.getErrorMsgText();
     }
 
     @And("^I click the Add button$")
     public void iClickTheAddButton() {
-        driver.findElement(By.id("modal_button")).click();
+        kristinekMainPage.addBtn.click();
         //  driver.findElements(By.cssSelector("")).size();
     }
 
 
-    @And("^I should see page List of people$")
-    public void iShouldSeePageListOfPeople() {
+//    @And("^I should see page List of people$")
+//    public void iShouldSeePageListOfPeople() {
         //Assert.assertTrue(driver.getCurrentUrl().equals('https://kristinek.github.io/site/tasks/list_of_people.html'));
-        System.out.println("|  " + driver.getCurrentUrl() + " |");
-    }
+//        System.out.println("|  " + driver.getCurrentUrl() + " |");
+//    }
 
     @And("^I click the reset button$")
     public void iClickTheResetButton() {
@@ -82,7 +82,7 @@ public class EnterName extends BaseUtil {
 
     @And("^I verify new added persons in list$")
     public void iVerifyNewAddedPersonsInList() {
-        Assert.assertTrue(driver.findElement(By.id("person2")).isDisplayed());
+        Assert.assertTrue(kristinekMainPage.addedPerson.isDisplayed());
     }
 
 

@@ -13,7 +13,7 @@ Feature: EnterName
       | english |
       | spanish |
     And I click the Add button
-    And I should see page List of people
+#    And I should see page List of people
 #   And Pause
     And I verify new added persons in list
 

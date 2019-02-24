@@ -28,9 +28,12 @@ public class KristinekMainPage {
     @FindBy(css = "[onclick='resetListOfPeople()']")
     public List<WebElement> resetBtn;
     @FindBy(css = "[id='person3']")
-//    public WebElement addedPerson;
-//    @FindBy(css = "")
-    public WebElement pageListOfPeople;
+    public WebElement addedPerson;
+    @FindBy(css = "[id='modal_button']")
+    public WebElement addBtn;
+    @FindBy(css = "[id='female']")
+    public WebElement femaleRadioBtn;
+
     @FindBy(css = "[onclick='openModalForAddPerson()']")
     public List<WebElement> addPersonBtn;
 
