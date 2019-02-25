@@ -4,6 +4,7 @@ Feature: Introduction to cucumber part 3
   I want to be able to write and execute a scenario outline
 
   @debugs
+
   Scenario Outline: a new scenario outline
     Given I am on age page
     When I enter name: "<name>"

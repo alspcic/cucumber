@@ -29,13 +29,13 @@ public class SampleSteps {
     @Then("^I should see home page header$")
     public void iShouldSeeHomePageHeader() throws Throwable {
         assertEquals("This is a home page",
-                driver.findElement(By.cssSelector("h1")).getText());
+            driver.findElement(By.cssSelector("h1")).getText());
     }
 
     @And("^I should see home page description$")
     public void iShouldSeeHomePageDescription() throws Throwable {
         assertEquals("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                driver.findElement(By.cssSelector("p")).getText());
+            driver.findElement(By.cssSelector("p")).getText());
     }
 
     @When("^I enter name: \"([^\"]*)\"$")
