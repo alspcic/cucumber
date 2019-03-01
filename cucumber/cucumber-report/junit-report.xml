@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="5.790716">
+<testcase classname="Introduction to cucumber part 1" name="Simple scenario" time="5.790716">
+<skipped><![CDATA[When I am on the home page..................................................undefined
+Then I should see home page header..........................................undefined
+And I should see home page description......................................undefined
+And I should see menu.......................................................undefined
+]]></skipped>
+</testcase>
+</testsuite>
