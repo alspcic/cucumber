@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -158,5 +159,32 @@ public class SampleSteps {
     @When("^I select \"Option 1\" by value$")
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
+    }
+
+    @Given("^I am on enter_a_number page$")
+    public void iAmOnEnter_a_numberPage() {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+    }
+
+    @When("^I enter number: (\\d+)$")
+    public void iEnterNumberNumber(int num) throws Throwable {
+        driver.findElement(By.id("numb")).sendKeys(String.valueOf(num));
+    }
+
+    @And("^I click submit number button$")
+    public void iClickSubmitNumberButton() {
+        //<button type="button" onclick="numberValidation()" class="w3-btn w3-orange w3-margin">Submit</button>
+        driver.findElement(By.className("w3-btn")).click();
+    }
+
+    @Then("^I see result message: \"([^\"]*)\"$")
+    public void iSeeResultMessage(String message) throws Throwable {
+        //<p id="ch1_error" class="error">Number is too small</p>
+        assertEquals(true, driver.findElement(By.className("error")).isDisplayed());
+    }
+
+    @Then("^I see result popup$")
+    public void iSeeResultPopup() {
+        assertEquals("Square root", driver.switchTo().alert().getText().substring(0,11));
     }
 }
