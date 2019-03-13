@@ -12,9 +12,9 @@ Feature: Create multiple people
     And I enter persons job: "<job>"
     And I enter persons date of birth: "<dateOfBirth>"
     And I select languages:
-      |languages    |
-      |english      |
-      |french       |
+      | languages |
+      | english   |
+      | french    |
     And I select gender: "<gender>"
     And I choose status: "<employeeStatus>"
     And I click on Add button
@@ -22,6 +22,6 @@ Feature: Create multiple people
 #    Then I validate the person added "<name>" "<surname>" Job: "<job>" Date of birth: "<dateOfBirth>" Gender: "<gender>" Employee status: "<employeeStatus>"
     Then I validate the person added "<name>" "<surname>" Job: "<job>" Date of birth: "<dateOfBirth>" Employee status: "<employeeStatus>"
     Examples:
-      |name|surname|job       |dateOfBirth|gender|employeeStatus|
-      |Jane|Doe    |Architect |02/01/1990 |female|employee      |
-      |John|Doe    |Accountant|02/01/1985 |male  |employee      |
+      | name | surname | job        | dateOfBirth | gender | employeeStatus |
+      | Jane | Doe     | Architect  | 02/01/1990  | female | employee       |
+      | John | Doe     | Accountant | 02/01/1985  | male   | employee       |
