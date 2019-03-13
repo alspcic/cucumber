@@ -21,48 +21,48 @@ public class overviewPage {
     private WebElement dateOfBirth;
     @FindBy(how = How.CSS, using = "#listOfPeople div:nth-of-type(4) .gender")
     private WebElement gender;
-    @FindBy(how = How.CSS, using = "#listOfPeople div:nth-of-type(3) .language")
+    @FindBy(how = How.CSS, using = "#listOfPeople div:nth-of-type(4) .language")
     private WebElement language;
     @FindBy(how = How.CSS, using = "#listOfPeople div:nth-of-type(4) .status")
     private WebElement employeeStatus;
 
-    public String getPageUrl (){
+    public String getPageUrl() {
         return "https://kristinek.github.io/site/tasks/list_of_people.html";
     }
 
-    public void resetList (){
+    public void resetList() {
         resetButton.click();
     }
 
-    public void addNewPerson (){
+    public void addNewPerson() {
         addNewButton.click();
     }
 
-    public String getName (){
+    public String getName() {
         return name.getText();
     }
 
-    public String getSurname (){
+    public String getSurname() {
         return surname.getText();
     }
 
-    public String getJob (){
+    public String getJob() {
         return job.getText();
     }
 
-    public String getDateOfBirth (){
+    public String getDateOfBirth() {
         return dateOfBirth.getText();
     }
 
-    public String getGender (){
+    public String getGender() {
         return gender.getText();
     }
 
-    public String getLanguage (){
+    public String getLanguage() {
         return language.getText();
     }
 
-    public String getEmployeeStatus (){
+    public String getEmployeeStatus() {
         return employeeStatus.getText();
     }
 }

@@ -29,55 +29,55 @@ public class addNewPage {
     @FindBy(how = How.CSS, using = ".w3-btn-group button:nth-of-type(1)")
     private WebElement addButton;
 
-    public void nameField (String name) {
-        nameField.clear ();
-        nameField.sendKeys (name);
+    public void nameField(String name) {
+        nameField.clear();
+        nameField.sendKeys(name);
     }
 
-    public void surnameField (String surname) {
-        surnameField.clear ();
-        surnameField.sendKeys (surname);
+    public void surnameField(String surname) {
+        surnameField.clear();
+        surnameField.sendKeys(surname);
     }
 
-    public void jobField (String job) {
-        jobField.clear ();
-        jobField.sendKeys (job);
+    public void jobField(String job) {
+        jobField.clear();
+        jobField.sendKeys(job);
     }
 
-    public void dateOfBirthField (String dateOfBirth) {
-        dateOfBirthField.clear ();
-        dateOfBirthField.sendKeys (dateOfBirth);
+    public void dateOfBirthField(String dateOfBirth) {
+        dateOfBirthField.clear();
+        dateOfBirthField.sendKeys(dateOfBirth);
     }
 
-    public void selectLanguage (String language){
-        if(language.equals("english")){
+    public void selectLanguage(String language) {
+        if (language.equals("english")) {
             englishCheckbox.isSelected();
         }
 
-        if(language.equals("french")){
+        if (language.equals("french")) {
             frenchCheckbox.isSelected();
         }
 
-        if(language.equals("spanish")){
+        if (language.equals("spanish")) {
             spanishCheckbox.isSelected();
         }
     }
 
-    public void selectGender (String gender){
-        if(gender.equals("male")){
+    public void selectGender(String gender) {
+        if (gender.equals("male")) {
             maleRadiobutton.isSelected();
         }
 
-        if(gender.equals("female")){
+        if (gender.equals("female")) {
             femaleRadiobutton.isSelected();
         }
     }
 
-    public void chooseStatus (String employeeStatus){
+    public void chooseStatus(String employeeStatus) {
         (new Select(employeeStatusField)).selectByValue(employeeStatus);
     }
 
-    public void addButton () {
-        addButton.click ();
+    public void addButton() {
+        addButton.click();
     }
 }

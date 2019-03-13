@@ -12,9 +12,9 @@ Feature: Create multiple people
     And I enter persons job: "<job>"
     And I enter persons date of birth: "<dateOfBirth>"
     And I select languages:
-      |languages    |
-      |english      |
-      |french       |
+      | language  |
+      | english   |
+      | french    |
     And I select gender: "<gender>"
     And I choose status: "<employeeStatus>"
     And I click on Add button
@@ -22,6 +22,29 @@ Feature: Create multiple people
 #    Then I validate the person added "<name>" "<surname>" Job: "<job>" Date of birth: "<dateOfBirth>" Gender: "<gender>" Employee status: "<employeeStatus>"
     Then I validate the person added "<name>" "<surname>" Job: "<job>" Date of birth: "<dateOfBirth>" Employee status: "<employeeStatus>"
     Examples:
-      |name|surname|job       |dateOfBirth|gender|employeeStatus|
-      |Jane|Doe    |Architect |02/01/1990 |female|employee      |
-      |John|Doe    |Accountant|02/01/1985 |male  |employee      |
+      | name | surname | job        | dateOfBirth | gender | employeeStatus |
+      | Jane | Doe     | Architect  | 02/01/1990  | female | employee       |
+      | John | Doe     | Accountant | 02/01/1985  | male   | employee       |
+
+  Scenario Outline: Create new People 2
+    Given I am on overview page
+    When I press Reset List button
+    And I press Add Person button
+    And I enter parameters:
+      | name        | <name>        |
+      | surname     | <surname>     |
+      | job         | <job>         |
+      | dateOfBirth | <dateOfBirth> |
+    And I select multiple languages:
+      | language  |
+      | english   |
+      | french    |
+      | spanish   |
+    And I choose value for gender: "<gender>"
+    And I choose value for status: "<employeeStatus>"
+    And I click on a Add button
+    Then I validate "<name>" "<surname>" "<job>" "<dateOfBirth>" "<employeeStatus>"
+    Examples:
+      | name | surname | job        | dateOfBirth | gender | employeeStatus |
+      | Jane | Smith   | Architect  | 02/01/1990  | female | employee       |
+      | John | Smith   | Accountant | 02/01/1985  | male   | intern         |
