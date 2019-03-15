@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import java.lang.Math;
+
 import java.util.List;
 import java.util.Map;
 
@@ -20,53 +20,6 @@ public class SampleSteps {
 
     public SampleSteps() {
         this.driver = Hooks.driver;
-    }
-
-
-
-    @And("^I verify error: ")
-    public void iVerifyErrorMessage() throws Throwable {
-        assertEquals("Number is too small",
-                driver.findElement(By.id("ch1_error")).getText());
-    }
-
-    @Then("^I should see the square root of this number: (\\d+)$")
-    public void iShouldSeeSquareRootOfThisNumber(int number) throws Throwable {
-        double a = (Math.sqrt(number));
-        assertEquals("Square root of ",number," is ",a;)
-                driver.switchTo().alert().getText());
-    }
-
-    @When("^I verify Google Search button text$")
-    public void IVerifyGoogleSearchButtonText() throws Throwable {
-        assertEquals("Google meklēšana",
-                driver.findElement(By.xpath("//*[@name='btnK'][1]")).getAttribute("value"));
-    }
-    @And("^I should see google image$")
-    public void iShouldSeeGoogleMenu() throws Throwable {
-        assertTrue(driver.findElement(By.id("hplogo")).isDisplayed());
-    }
-
-    @And("^I verify Google Lucky button text$")
-    public void IVerifyGoogleLuckyButtonText() throws Throwable {
-        assertEquals("Es ticu veiksmei!",
-                driver.findElement(By.xpath("//*[@name='btnI'][1]")).getAttribute("value"));
-    }
-
-    @Given("^I am on the web page: \"([^\"]*)\"$")
-    public void iAmOnTheWebPage(String webpage) throws Throwable {
-        driver.get(webpage);
-    }
-
-    @When("^I enter number: (\\d+)$")
-    public void iEnterNumber(int number) throws Throwable {
-        driver.findElement(By.id("numb")).sendKeys(String.valueOf(number));
-    }
-
-
-    @And("^I click submit$")
-    public void iClickSubmit() throws Throwable {
-        driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/button")).click();
     }
 
     @Given("^I am on the home page$")
