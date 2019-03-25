@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.apache.xpath.operations.String;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,12 +43,12 @@ public class SampleSteps {
     @When("^I enter name: \"([^\"]*)\"$")
     public void iEnterName(String name) throws Throwable {
         driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("name")).sendKeys(name);
+       // driver.findElement(By.id("name")).sendKeys(name);
     }
 
     @And("^I enter age: (\\d+)$")
     public void iEnterAge(int age) throws Throwable {
-        driver.findElement(By.id("age")).sendKeys(String.valueOf(age));
+        //driver.findElement(By.id("age")).sendKeys(String.valueOf(age));
     }
 
     @Given("^I (?:am on|open) age page$")
@@ -68,8 +69,8 @@ public class SampleSteps {
     @When("^I enter values:$")
     public void iEnterValues(Map<String, String> valuesToEnter) throws Throwable {
         for (Map.Entry<String, String> e : valuesToEnter.entrySet()) {
-            driver.findElement(By.id(e.getKey())).clear();
-            driver.findElement(By.id(e.getKey())).sendKeys(e.getValue());
+           // driver.findElement(By.id(e.getKey())).clear();
+            //driver.findElement(By.id(e.getKey())).sendKeys(e.getValue());
             System.out.println("key is " + e.getKey());
             System.out.println("value is " + e.getValue());
         }
@@ -147,7 +148,7 @@ public class SampleSteps {
 
     @When("^I select \"([^\"]*)\" by text$")
     public void iSelectByText(String visibleText) throws Throwable {
-        new Select(driver.findElement(By.id("vfb-12"))).selectByVisibleText(visibleText);
+        new Select(driver.findElement(By.id("vfb-12"))).selectByVisibleText(java.lang.String.valueOf(visibleText));
     }
 
     @When("^I select \"Option 1\" by index$")
@@ -159,4 +160,5 @@ public class SampleSteps {
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
     }
+
 }
