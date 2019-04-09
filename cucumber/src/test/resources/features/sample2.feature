@@ -6,13 +6,13 @@ Feature: Introduction to cucumber part 2
     Given I am on age page
 
   Scenario: a new scenario 1 with regex
-    When I enter name: "Ann"
+    When I entered name: "Anna"
     And I enter age: 5
     And I click submit age
     Then I see message: "Hello, Ann, you are a kid"
 
   Scenario: a new scenario 2 with regex
-    When I enter name: "Bob"
+    When I entered name: "Bobby"
     And I enter age: 61
     And I click submit age
     Then I see message: "Hello, Bob, you are an adult"
