@@ -1,10 +1,10 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,10 +22,12 @@ public class SampleSteps {
         this.driver = Hooks.driver;
     }
 
+
     @Given("^I am on the home page$")
     public void iAmOnTheHomePage() throws Throwable {
         driver.get("https://kristinek.github.io/site");
     }
+
 
     @Then("^I should see home page header$")
     public void iShouldSeeHomePageHeader() throws Throwable {
@@ -158,5 +160,42 @@ public class SampleSteps {
     @When("^I select \"Option 1\" by value$")
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
+    }
+
+
+    @When("^I am on the Enter a number task page$")
+    public void iAmOnTheEnterANumberTaskPage() {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+    }
+
+    @And("^I enter number: \"([^\"]*)\"$")
+    public void iEnterNumber(String number) {
+        driver.findElement(By.id("numb")).clear();
+        driver.findElement(By.id("numb")).sendKeys(number);
+    }
+
+    @When("^I click Submit button$")
+    public void iClickTheButton() {
+        driver.findElement(By.className("w3-btn")).click();
+    }
+
+
+    @Then("^I verify message is: \"([^\"]*)\"$")
+    public void iVerifyMessageIs(String message) {
+        Assert.assertEquals(message, driver.findElement(By.id("ch1_error")).getText());
+    }
+
+    @When("^I verify alert message is: \"([^\"]*)\"$")
+    public void iVerifyAlertMessageIs(String message) {
+        String alertText = driver.switchTo().alert().getText();
+        Assert.assertEquals(message, alertText);
+    }
+
+    @When("^I verify root in alert message is correctly calculated for entered number: \"([^\"]*)\"$")
+    public void iVerifyAlertMessageIsCorrectlyCalculated(double number) {
+        String alertText = driver.switchTo().alert().getText();
+        String root = String.format("%.2f", Math.sqrt(number));
+        String message = "Square root of " + String.valueOf(number).replace(".0", "") + " is " + root;
+        assertEquals(message, alertText);
     }
 }

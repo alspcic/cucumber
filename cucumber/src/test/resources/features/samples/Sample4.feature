@@ -5,11 +5,11 @@ Feature: Introduction to cucumber part 3
 
   @debugs
   Scenario Outline: a new scenario outline
-    Given I am on age page using PO
-    When I enter name: "<name>" using PO
-    And I enter age: <age> using PO
-    And I click submit age using PO
-    Then I see message: "<message>" using PO
+    Given I am on age page
+    When I enter name: "<name>"
+    And I enter age: <age>
+    And I click submit age
+    Then I see message: "<message>"
   @working
     Examples:
       | name  | age | message                        |
