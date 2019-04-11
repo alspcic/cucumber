@@ -18,6 +18,8 @@ import static org.junit.Assert.*;
 
 public class SampleSteps {
     private WebDriver driver;
+    String name = "";
+    
 
     public SampleSteps() {
         this.driver = Hooks.driver;
@@ -31,7 +33,7 @@ public class SampleSteps {
     @Then("^I should see home page header$")
     public void iShouldSeeHomePageHeader() throws Throwable {
         assertEquals("This is a home page",
-                driver.findElement(By.cssSelector("h1")).getText());
+                driver.findElement(By.id("h1")).getText());
     }
 
     @And("^I should see home page description$")
@@ -64,24 +66,22 @@ public class SampleSteps {
     @Then("^I see message: \"([^\"]*)\"$")
     public void iSeeMessage(String message) throws Throwable {
         assertEquals(message, driver.findElement(By.id("message")).getText());
-
-        Alert alert = driver.switchTo().alert();
-        alert.getText();
     }
 
     @When("^I enter values:$")
     public void iEnterValues(Map<String, String> valuesToEnter) throws Throwable {
-        for (Map.Entry<String, String> e : valuesToEnter.entrySet()) {
-            driver.findElement(By.id(e.getKey())).clear();
-            driver.findElement(By.id(e.getKey())).sendKeys(e.getValue());
-            System.out.println("key is " + e.getKey());
-            System.out.println("value is " + e.getValue());
+        for (Map.Entry<String, String> value : valuesToEnter.entrySet()) {
+            driver.findElement(By.id(value.getKey())).clear();
+            driver.findElement(By.id(value.getKey())).sendKeys(value.getValue());
+            System.out.println("key is " + value.getKey());
+            System.out.println("value is " + value.getValue());
         }
     }
 
     @And("^I should see menu$")
     public void iShouldSeeMenu() throws Throwable {
         assertTrue(driver.findElement(By.className("w3-navbar")).isDisplayed());
+//        assertTrue(driver.findElement(By.cssSelector(".w3-navbar.w3-black.w3-large")).isDisplayed());
     }
 
     @And("^I click the result checkbox button$")
@@ -92,7 +92,7 @@ public class SampleSteps {
     @When("^I clicked on checkboxes:$")
     public void iClickedOnCheckboxes(List<String> values) throws Throwable {
         for (String value : values) {
-            driver.findElement(By.cssSelector("[value='" + value + "']")).click();
+                driver.findElement(By.cssSelector("[value='" + value + "']")).click();
         }
     }
 
@@ -167,6 +167,7 @@ public class SampleSteps {
     @Given("^I am on the google page$")
     public void iAmOnTheGooglePage() throws Throwable {
         driver.get("http://www.google.com");
+        String actualResult = driver.findElement(By.name("")).getAttribute("value");
     }
 
     @And("^i type \"([^\"]*)\" asd$")
@@ -174,4 +175,14 @@ public class SampleSteps {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
+
+    @And("^I want to type something$")
+    public void iWantToTypeSomething() throws Throwable {
+        Alert alert = driver.switchTo().alert();
+
+        String myActualValue = alert.getText();
+
+    }
+
+
 }

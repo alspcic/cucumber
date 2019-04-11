@@ -10,6 +10,7 @@ Feature: Introduction to cucumber part 3
     And I enter age: <age>
     And I click submit age
     Then I see message: "<message>"
+    And i verify alert message
   @working
     Examples:
       | name  | age | message                        |

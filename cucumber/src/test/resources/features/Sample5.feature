@@ -20,4 +20,3 @@ Feature: Introduction to cucumber part 4
       | Option 2 |
     And I click the result checkbox button
     Then message for checkboxes "You selected value(s): Option 2" is seen
-
