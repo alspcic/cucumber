@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import com.sun.javafx.PlatformUtil;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -20,15 +19,15 @@ public class Hooks {
 
     @Before
     public void openBrowser() throws Exception {
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\" + "chromedriver.exe");
-        } else if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverMac");
-        } else if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverLinux");
-        } else {
-            fail("Chrome driver for our OS is not in our libs please add it.");
-        }
+//        if (PlatformUtil.isWindows()) {
+//            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\" + "chromedriver.exe");
+//        } else if (PlatformUtil.isMac()) {
+//            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverMac");
+//        } else if (PlatformUtil.isLinux()) {
+//            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverLinux");
+//        } else {
+//            fail("Chrome driver for our OS is not in our libs please add it.");
+//        }
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
     }
