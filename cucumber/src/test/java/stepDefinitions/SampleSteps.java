@@ -62,7 +62,7 @@ public class SampleSteps {
 
     @Then("^I see message: \"([^\"]*)\"$")
     public void iSeeMessage(String message) throws Throwable {
-        assertEquals(message, driver.findElement(By.id("message")).getText());
+        assertEquals(message, driver.findElement(By.id("ch1_error")).getText());
     }
 
     @When("^I enter values:$")
