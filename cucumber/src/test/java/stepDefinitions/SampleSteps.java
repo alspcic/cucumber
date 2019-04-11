@@ -57,7 +57,7 @@ public class SampleSteps {
 
     @And("^I click submit age$")
     public void iClickSubmitAge() throws Throwable {
-        driver.findElement(By.id("submit")).click();
+            driver.findElement(By.id("submit")).click();
     }
 
     @Then("^I see message: \"([^\"]*)\"$")

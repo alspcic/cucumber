@@ -23,7 +23,8 @@ public class Hooks {
         if (PlatformUtil.isWindows()) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\" + "chromedriver.exe");
         } else if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverMac");
+//            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverMac");
+            System.setProperty("webdriver.chromedriver.driver", "C://Tools/chromedriver.exe");
         } else if (PlatformUtil.isLinux()) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/lib/" + "chromedriverLinux");
         } else {
