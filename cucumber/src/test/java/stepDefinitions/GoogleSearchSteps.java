@@ -9,27 +9,16 @@ import util.BaseUtil;
 
 public class GoogleSearchSteps extends BaseUtil {
 
-    @Given("^I am on Google page$")
+    @Given("^I am on google PO page$")
     public void iAmOnGooglePage() {
         driver.get("https://www.google.com/");
     }
 
-    @When("^I verify Google search button text$")
-    public void iVerifyGoogleSearchButtonText() {
-        Assert.assertTrue(googleMainPage.googleSearchBtn.isDisplayed());
-    }
 
-    @And("^I verify Google lucky button text$")
-    public void iVerifyGoogleLuckyButtonText() {
-        Assert.assertTrue(googleMainPage.googleLuckyBtn.isDisplayed());
-    }
+    @When("^I check google PO Search button text$")
+    public void iCheckGooglePOSearchButtonText() {
 
-    @And("^I should see google image$")
-    public void iShouldSeeGoogleImage() {
-        Assert.assertTrue(googleMainPage.googleLogo.isDisplayed());
 
 
     }
-
-
 }
