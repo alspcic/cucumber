@@ -9,8 +9,10 @@ public class NumberPage {
     private WebElement numberHeader;
     @FindBy(how = How.XPATH, using = "//input[@id='numb']")
     private WebElement inputField;
-    @FindBy(how = How.XPATH, using = "//input[@id='numb']")
+    @FindBy(how = How.XPATH, using = "//button[@type='button']")
     private WebElement submitButton;
+    @FindBy(how = How.XPATH, using = "//p[@id='ch1_error']")
+    private WebElement errorMessge;
 
     public String getPageUrl() {
         return "https://kristinek.github.io/site/tasks/enter_a_number";
@@ -30,5 +32,9 @@ public class NumberPage {
 
     public void clickSubmitButton() {
         submitButton.click();
+    }
+
+    public String getErrorMessageText() {
+        return errorMessge.getText();
     }
 }

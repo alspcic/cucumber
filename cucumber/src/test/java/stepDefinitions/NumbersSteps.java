@@ -39,13 +39,14 @@ public class NumbersSteps {
         page.enterNumber(number);
     }
 
-    @And("^I click (button|checkbox) Submit$")
+    @And("^I click button Submit$")
     public void iClickButtonSubmit() {
         page.clickSubmitButton();
     }
 
-    @Then("^I see error message \"([^\"]*)\"$")
+    @Then("^I see error message ([^\"]*)$")
     public void iSeeErrorMessageMessage(String message) {
+        assertEquals(message, page.getErrorMessageText());
     }
 
 }

@@ -10,6 +10,6 @@ Feature: Introduction to cucumber part 1
     Then I see error message <message>
 
     Examples:
-      | number | message                 |
-      | 31     | The number is too small |
-      | 103    | The number is too big   |
+      | number | message             |
+      | 31     | Number is too small |
+      | 103    | Number is too big   |
