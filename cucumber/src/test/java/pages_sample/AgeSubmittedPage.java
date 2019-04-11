@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class AgeSubmittedPage {
     @FindBy(how = How.CSS, using = "#message")
     private WebElement message;
+
     @FindBy(how = How.TAG_NAME, using = "button")
     private WebElement backButton;
 
