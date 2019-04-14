@@ -14,7 +14,6 @@ public class GooglePage {
     @FindBy(how = How.ID, using = "btnI") // By.id("btnI")
     private WebElement buttonSearch; // WebElement nameInput = driver.findElement(By.id("btnI"));
 
-
     @FindBy(how = How.NAME, using = "q") // By.name("q")
     private WebElement searchInput;
 
@@ -43,12 +42,9 @@ public class GooglePage {
         searchInput.sendKeys(Keys.RETURN);
     }
 
-//    @And("^I found something using PO$")
     public void verifySearchResult() throws Throwable {
         int empty = 0;
         int size = searchResults.size();
-//                driver.findElements(By.className("srg")).size();
-
         assertNotEquals(size, empty);
     }
 
