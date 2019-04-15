@@ -48,5 +48,4 @@ public class NumbersSteps {
     public void iSeeErrorMessageMessage(String message) {
         assertEquals(message, page.getErrorMessageText());
     }
-
 }

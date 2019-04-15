@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b9efe61-947a-4d22-aa14-6f6722806bcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/AddNewPersonPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/PeopleWithJobsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/PeopleWithJobsSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../cucumber/target/" />
@@ -16,124 +17,179 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/SampleSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample3.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/GoogleSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-              <folding>
-                <element signature="e#1171#1172#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/GoogleHomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="96" />
-              <folding>
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
-                <element signature="e#953#954#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1123#1124#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1186#1187#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-                <element signature="e#1323#1324#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample2.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample4.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/Hooks.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/PeopleWithJobsPage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1005#1006#0" expanded="true" />
+                    <element signature="e#1033#1034#0" expanded="true" />
+                    <element signature="e#1514#1515#0" expanded="true" />
+                    <element signature="e#1547#1548#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/AddNewPersonPage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#656#657#0" expanded="true" />
+                    <element signature="e#732#733#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/PeopleWithJobsSteps.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="254">
+                  <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#939#940#0" expanded="true" />
+                    <element signature="e#966#967#0" expanded="true" />
+                    <element signature="e#4036#4037#0" expanded="true" />
+                    <element signature="e#4246#4247#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/GoogleSteps.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#1171#1172#0" expanded="true" />
+                    <element signature="e#1225#1226#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/runners/CucumberRunner.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/GoogleHomePage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="96" />
+                  <folding>
+                    <element signature="e#816#817#0" expanded="true" />
+                    <element signature="e#852#853#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/SampleSteps.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="158">
+                  <caret line="97" selection-start-line="97" selection-end-line="97" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample6.feature">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="40" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#868#869#0" expanded="true" />
+                    <element signature="e#929#930#0" expanded="true" />
+                    <element signature="e#1019#1020#0" expanded="true" />
+                    <element signature="e#1059#1060#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample3.feature">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,18 +208,23 @@
         <option value="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/GoogleHomePage.java" />
         <option value="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/GoogleSteps.java" />
         <option value="$PROJECT_DIR$/../cucumber/src/test/resources/features/sample3.feature" />
-        <option value="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" />
-        <option value="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java" />
         <option value="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java" />
         <option value="$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/runners/CucumberRunner.java" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/SampleSteps.java" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/AddNewPersonPage.java" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/PeopleWithJobsSteps.java" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" />
+        <option value="$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/PeopleWithJobsPage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1104" />
+    <option name="x" value="-6" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -171,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +271,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="runners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cucumber_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cucumber" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="stepDefinitions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,11 +300,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555002625792" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555364131020" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -250,7 +319,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: NumberTask">
+  <component name="RunManager" selected="Cucumber java.Scenario: Simple scenario working with people page">
     <configuration name="Feature: GoogleTask" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/../cucumber/src/test/resources/features/GoogleTask.feature" />
@@ -306,6 +375,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Simple scenario working with people page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumber_project" />
+      <option name="NAME_FILTER" value="^Simple scenario working with people page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Simple scenario working with people page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Simple scenario working with people page" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Simple scenario" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/../cucumber/src/test/resources/features/GoogleTask.feature" />
@@ -327,6 +415,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: Simple scenario working with people page" />
         <item itemvalue="Cucumber java.Feature: NumberTask" />
         <item itemvalue="Cucumber java.Scenario: Check errors scenario" />
         <item itemvalue="Cucumber java.Scenario: Simple scenario" />
@@ -348,41 +437,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__Simple_scenario - 2019.04.11 at 18h 08m 44s.xml">
-      <configuration name="Scenario: Simple scenario" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 23m 26s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__GoogleTask - 2019.04.11 at 18h 16m 31s.xml">
-      <configuration name="Feature: GoogleTask" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 23m 51s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Simple_scenario - 2019.04.11 at 18h 17m 12s.xml">
-      <configuration name="Scenario: Simple scenario" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 24m 19s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__GoogleTask - 2019.04.11 at 18h 21m 49s.xml">
-      <configuration name="Feature: GoogleTask" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 24m 38s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Simple_scenario - 2019.04.11 at 18h 23m 00s.xml">
-      <configuration name="Scenario: Simple scenario" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 25m 38s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Check_errors_scenario - 2019.04.11 at 20h 01m 55s.xml">
-      <configuration name="Scenario: Check errors scenario" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 30m 18s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__Check_errors_scenario - 2019.04.11 at 20h 03m 03s.xml">
-      <configuration name="Scenario: Check errors scenario" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 31m 33s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__NumberTask - 2019.04.11 at 20h 07m 42s.xml">
-      <configuration name="Feature: NumberTask" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 32m 28s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__NumberTask - 2019.04.11 at 20h 09m 18s.xml">
-      <configuration name="Feature: NumberTask" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 33m 15s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__NumberTask - 2019.04.11 at 20h 10m 14s.xml">
-      <configuration name="Feature: NumberTask" configurationId="CucumberJavaRunConfigurationType" />
+    <history-entry file="Scenario__Simple_scenario_working_with_people_page - 2019.04.16 at 00h 34m 27s.xml">
+      <configuration name="Scenario: Simple scenario working with people page" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-3" y="-1088" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28582996" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13432837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -392,8 +481,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.59857905" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5980498" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -428,9 +517,6 @@
     <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample1.feature">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample6.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample5.feature">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -448,21 +534,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/SampleSteps.java">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample4.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="39" />
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/GoogleSteps.java">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/Hooks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample2.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample3.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -477,70 +573,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample2.feature">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample4.feature">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/runners/CucumberRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/sample3.feature">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/GoogleSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="595">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/Sample6.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/NumbersSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+        <state relative-caret-position="680">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#868#869#0" expanded="true" />
             <element signature="e#929#930#0" expanded="true" />
             <element signature="e#1019#1020#0" expanded="true" />
             <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1323#1324#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/NumberPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        <state relative-caret-position="119">
+          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/AddNewPersonPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/PeopleWithJobsSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#4036#4037#0" expanded="true" />
+            <element signature="e#4246#4247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/pages_sample/PeopleWithJobsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/PeopleTask.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="510">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/resources/features/NumberTask.feature">
+    <entry file="file://$PROJECT_DIR$/../cucumber/src/test/java/stepDefinitions/SampleSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="158">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
