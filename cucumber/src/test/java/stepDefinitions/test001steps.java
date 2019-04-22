@@ -6,12 +6,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import pages_sample.GoogleSearchPage;
-import stepDefinitions.Hooks;
-
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -43,6 +39,7 @@ public class test001steps {
 
     @And("^I click search$")
     public void iClickSearch() throws Throwable {
+        sleep(2000);
         gsp.ClickHappyButton();
     }
 
@@ -52,7 +49,6 @@ public class test001steps {
         assertTrue(gsp.resultStatus.isDisplayed());
         //assertTrue(gsp.resultStatus.getAttribute("innerText").toString().contains("Aptuveni 2"));
     }
-
 
     @Given("^I (?:am on|open) number page$")
     public void iAmOnNumberPage() throws Throwable {

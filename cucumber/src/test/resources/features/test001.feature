@@ -7,7 +7,6 @@ Feature: Check the google page
     And I click search
     And I found something
 
-
   @debugs
   Scenario Outline: a new scenario outline
     Given I am on number page

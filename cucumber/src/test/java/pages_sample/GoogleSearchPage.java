@@ -26,7 +26,6 @@ public class GoogleSearchPage {
     public void EnterSearcThext(String text) {
         searhTextBox.sendKeys(text);
     }
-
 }
 
 
