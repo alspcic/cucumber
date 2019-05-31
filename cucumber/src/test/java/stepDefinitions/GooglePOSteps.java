@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -37,7 +36,7 @@ public class GooglePOSteps {
     @And("^I found something PO$")
     public void iFoundSomethingPO() {
         googlePage.clickSearchBtn();
-        googlePage.checkResultText("Aptuveni 1 040 000 000 rezultāti");
+        googlePage.checkResultText("Aptuveni ");
     }
 
 
