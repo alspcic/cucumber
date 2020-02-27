@@ -1,26 +1,42 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Pa;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import pages_sample.*;
 
 import java.util.List;
 import java.util.Map;
 
+import static com.sun.jmx.snmp.ThreadContext.contains;
 import static org.junit.Assert.*;
 
 public class SampleSteps {
     private WebDriver driver;
+    static GooglePage googlePage;
+    static PeopleWithJobsPage peopleWithJobsPage;
+    static AddPersonPage addPersonPage;
 
     public SampleSteps() {
         this.driver = Hooks.driver;
-    }
+        googlePage = PageFactory.initElements(Hooks.driver, GooglePage.class);
+        peopleWithJobsPage = PageFactory.initElements(Hooks.driver, PeopleWithJobsPage.class);
+        addPersonPage = PageFactory.initElements(Hooks.driver, AddPersonPage.class);
+        }
+
+  /*  public SampleSteps() {
+        this.driver = Hooks.driver;
+    } */
 
     @Given("^I am on the home page$")
     public void iAmOnTheHomePage() throws Throwable {
@@ -158,5 +174,149 @@ public class SampleSteps {
     @When("^I select \"Option 1\" by value$")
     public void iSelectByValue() throws Throwable {
         new Select(driver.findElement(By.id("vfb-12"))).selectByValue("value1");
+    }
+
+    @Given("^I am on Google page$")
+    public void iAmOnGooglePage() throws Throwable {
+        driver.get("https://www.google.com/");
+        //assertEquals("Google", driver.getTitle());
+    }
+
+
+    @When("^I click click button search$")
+    public void iClickClickButtonSearch() throws Throwable {
+        googlePage.clickSearchBtn();
+
+     }
+
+    @Then("^I am able to see search results$")
+    public void iAmAbleToSeeSearchResults() throws Throwable {
+        assertTrue(driver.findElement(By.id("resultStats")).getText().contains("Aptuveni"));
+    }
+
+    @When("^I verify Google Search button text$")
+    public void iVerifyGoogleSearchButtonText() throws Throwable {
+        assertEquals("Google meklēšana", driver.findElement(By.name("btnK")).getAttribute("value"));
+    }
+
+    @And("^I verify google lucky button$")
+    public void iVerifyGoogleLuckyButton() throws Throwable {
+        assertEquals("Es ticu veiksmei!", driver.findElement(By.name("btnI")).getAttribute("value"));
+    }
+
+    @And("^I should see google picture$")
+    public void iShouldSeeGooglePicture() throws Throwable {
+        assertTrue(driver.findElement(By.id("hplogo")).isDisplayed());
+    }
+
+    @When("^I input value \"([^\"]*)\" in search$")
+    public void iInputValueInSearch(String value) throws Throwable {
+        googlePage.inputValue(value);
+    }
+
+    @Given("^I am on Enter a number page$")
+    public void iAmOnEnterANumberPage() throws Throwable {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+    }
+
+
+    @When("^I enter numbers:\"([^\"]*)\"$")
+    public void iEnterNumbers(String number) throws Throwable {
+        driver.findElement(By.id("numb")).sendKeys(String.valueOf(number));
+    }
+
+    @Then("^I receive message:\"([^\"]*)\"$")
+    public void iReceiveMessage(String message) throws Throwable {
+        assertEquals(message, driver.findElement(By.id("ch1_error")).getText());
+    }
+
+    @And("^I click button Submit$")
+    public void iClickButtonSubmit() throws Throwable {
+        driver.findElement(By.xpath("//button[@type='button']")).click();
+    }
+
+    @Then("^I receive pop-up message:\"([^\"]*)\"$")
+    public void iReceivePopUpMessage(String message) throws Throwable {
+        Alert alert = driver.switchTo().alert();
+        String alertMessage = driver.switchTo().alert().getText();
+        assertEquals(message,alertMessage);
+        alert.accept();
+    }
+
+    @Given("^I am on add new person page$")
+    public void iAmOnAddNewPersonPage() throws Throwable {
+        driver.get(peopleWithJobsPage.getPageUrl());
+    }
+
+
+    @And("^I click button Reset List$")
+    public void iClickButtonResetList() throws Throwable {
+        peopleWithJobsPage.clickResetList();
+    }
+
+
+    @When("^I click button Add person$")
+    public void iClickButtonAddPerson() throws Throwable {
+        peopleWithJobsPage.clickAddPerson();
+    }
+
+
+    @And("^I input person name: \"([^\"]*)\"$")
+    public void iInputPersonName(String name) throws Throwable {
+        addPersonPage.inputName(name);
+    }
+
+
+    @And("^I input person surname: \"([^\"]*)\"$")
+    public void iInputPersonSurname(String surname) throws Throwable {
+        addPersonPage.inputSurname(surname);
+    }
+
+    @And("^I input person job: \"([^\"]*)\"$")
+    public void iInputPersonJob(String job) throws Throwable {
+        addPersonPage.inputJob(job);
+    }
+
+    @And("^I input person date of birth: \"([^\"]*)\"$")
+    public void iInputPersonDateOfBirth(String dob) throws Throwable {
+        addPersonPage.inputDob(dob);
+    }
+
+    @And("^I select language:$")
+    public void iSelectLanguage(Map<String, String> valuesToEnter) throws Throwable {
+        for (Map.Entry<String, String> e : valuesToEnter.entrySet()) {
+            addPersonPage.selectLanguage(e.getKey());
+        }
+    }
+
+    @And("^I select gender: \"([^\"]*)\"$")
+    public void iSelectGender(String gender) throws Throwable {
+        addPersonPage.selectGender(gender);
+    }
+
+    @And("^I select status: \"([^\"]*)\"$")
+    public void iSelectStatus(String status) throws Throwable {
+        addPersonPage.selectStatus(status);
+
+    }
+
+    @Then("^I click button Add$")
+    public void iClickButtonAdd() throws Throwable {
+        addPersonPage.clickAddBtn();
+    }
+
+
+    @Then("^I am able to see person added to a list:$")
+    public void iAmAbleToSeePersonAddedToAList(DataTable dt) throws InterruptedException {
+        Thread.sleep(500);
+        List<Map<String, String>> list = dt.asMaps(String.class, String.class);
+        for(int i=0; i<list.size(); i++) {
+            assertEquals(list.get(i).get("name"), peopleWithJobsPage.getName());
+            assertEquals(list.get(i).get("surname"), peopleWithJobsPage.getSurname());
+            assertEquals(list.get(i).get("job"), peopleWithJobsPage.getJob());
+            assertEquals(list.get(i).get("date of birth"), peopleWithJobsPage.getDob());
+            assertEquals(list.get(i).get("gender"), peopleWithJobsPage.getGender());
+            assertEquals(list.get(i).get("status"), peopleWithJobsPage.getStatus());
+        }
     }
 }
