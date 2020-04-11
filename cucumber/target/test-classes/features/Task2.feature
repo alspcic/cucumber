@@ -19,6 +19,6 @@ Feature: Introduction to Cucumber
     Then A new person "<name>" "<surname>" with job "<job>" and status "<status>" of gender "<gender>" which is born "<dob>" is added
 
     Examples:
-      | name | surname | job    | dob        | gender | status |
-      | Anna | White   | Nurse  | 10/10/1958 | female | intern |
-      | John | Don     | Driver | 12/05/1990 | male   | intern |
+      | name | surname | job   | dob        | gender | status |
+      | Anna | White   | Nurse | 10/10/1958 | female | intern |
+      | John | Don     | Driver | 12/05/1990 | male| intern |
